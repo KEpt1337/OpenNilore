@@ -1,9 +1,9 @@
 name: 一键自动同步 Fork 仓库（自动检测源仓库 + 代码 + Tags）
 
 on:
-  workflow_dispatch:   # 手动触发，推荐
-  # schedule:
-  #   - cron: '0 0 * * *'  # 可选：每天 UTC 00:00 自动同步
+  workflow_dispatch:   # 保留手动触发，方便随时手动运行
+  schedule:
+    - cron: '0 0 * * *'  # 每天 UTC 00:00 自动触发（北京时间上午 08:00）
 
 jobs:
   sync-fork:
